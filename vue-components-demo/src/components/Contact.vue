@@ -9,7 +9,10 @@
   </div>
 </template>
 <script setup>
-import { ref, defineProps } from "vue";
-const email = ref("hello@dotnetmastery.com");
-const props = defineProps({ name: String, phone: Number, ownername: String });
+const props = defineProps({
+  name: { type: String, required: true },
+  phone: Number,
+  ownername: String,
+  email: { type: String, required: false, default: "-n/a-" },
+});
 </script>
