@@ -1,7 +1,8 @@
 <template>
   <div class="bg-black text pt-3" :style="{ height: '100vh' }">
-    <h1 class="text-center text-success">ContactOPedia</h1>
-    <div class="container">
+    <h1 class="text-center text-success">Learn Slots</h1>
+    <div class="container text-center bg-white">
+      <slot></slot>
       <button
         class="btn btn-primary text-black m-2"
         @click="newVersion = !newVersion"
@@ -21,7 +22,7 @@
       <br />
       <br />
       <keep-alive :include="['LuckyNumber', 'LuckyNumberV2']">
-        <component :is="currentComponent" />
+        <component :is="currentComponent" class="border" />
       </keep-alive>
     </div>
   </div>
