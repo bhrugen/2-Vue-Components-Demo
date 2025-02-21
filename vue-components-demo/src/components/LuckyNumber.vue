@@ -17,7 +17,7 @@ import { ref } from "vue";
 let luckyNumber = ref(0);
 
 const props = defineProps({
-  maxNumber: { type: Number, default: 100 },
+  maxNumber: { type: Number, default: 10 },
 });
 
 function generateLuckyNumber() {
