@@ -51,6 +51,12 @@ const contacts = reactive([
   },
 ]);
 
+function onAddContact(contact) {
+  contact.ownerName = ownerName.value;
+  contact.isFavorite = false;
+  contacts.push(contact);
+}
+
 function onUpdateFavorite(oldValuesFromChildComponent, phoneNumberFromParent) {
   console.log(oldValuesFromChildComponent);
   return !oldValuesFromChildComponent.isFavorite;
